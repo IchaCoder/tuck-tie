@@ -1,0 +1,31 @@
+* {
+	outline: 1px solid red;
+}
+
+.nav_link:hover {
+	animation: nav 4s linear infinite;
+}
+
+@keyframes nav {
+	0% {
+		color: red;
+	}
+	15% {
+		color: orange;
+	}
+	35% {
+		color: yellow;
+	}
+	50% {
+		color: green;
+	}
+	65% {
+		color: blue;
+	}
+	80% {
+		color: indigo;
+	}
+	100% {
+		color: violet;
+	}
+}
