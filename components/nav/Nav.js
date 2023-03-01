@@ -10,7 +10,7 @@ export default function Nav() {
 
 	return (
 		<>
-			<nav className="flex justify-between py-6 px-4 md:px-8 lg:px-16">
+			<nav className="flex justify-between py-6 px-4 md:px-8 lg:px-16 md:absolute w-full">
 				<div>
 					<Link href={"/"} className="text-4xl italic font-bold">
 						Tuck<span className="text-primary">&</span>Tie
@@ -48,7 +48,7 @@ export default function Nav() {
 						About
 					</Link>
 				</div>
-				<div className="flex gap-6 lg:gap-4">
+				<div className="flex gap-4">
 					<a
 						href="tel:+2334444444"
 						className=" items-center hover:tracking-wide text-2xl self-center transition-all duration-200 ease-linear lg:text-base flex"

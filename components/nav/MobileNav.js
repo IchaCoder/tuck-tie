@@ -19,53 +19,55 @@ export default function MobileNav({ isNavOpen, setIsNavOpen }) {
 					initial="hidden"
 					animate="visible"
 					variants={variants}
-					className="mx-auto p-4 w-[90%] -mt-20 z-40 relative rounded flex flex-col bg-primary text-white"
+					className="fixed top-20 left-0 w-full"
 				>
-					<div className="flex justify-between">
-						<Link href={"/"}>
-							<Image src="/logo.png" alt="anisarp" width="100" height="50" />{" "}
-						</Link>
-						<AiOutlineClose
-							className="text-white text-xl hover:animate-spin mt-2 cursor-pointer"
+					<motion.div className="mx-auto p-4 w-[90%] -mt-20 z-40 relative rounded flex flex-col bg-primary text-white">
+						<div className="flex justify-between">
+							<Link href={"/"}>
+								<Image src="/logo.png" alt="anisarp" width="100" height="50" />{" "}
+							</Link>
+							<AiOutlineClose
+								className="text-white text-xl hover:animate-spin mt-2 cursor-pointer"
+								onClick={() => setIsNavOpen(false)}
+							/>
+						</div>
+						<Link
+							href="/"
+							className="py-2 hover:tracking-widest text-[15px] transition-all duration-300 ease-linear pl-4 mt-4"
 							onClick={() => setIsNavOpen(false)}
-						/>
-					</div>
-					<Link
-						href="/"
-						className="py-2 hover:tracking-widest text-[15px] transition-all duration-300 ease-linear pl-4 mt-4"
-						onClick={() => setIsNavOpen(false)}
-					>
-						Home
-					</Link>
+						>
+							Home
+						</Link>
 
-					<Link
-						href="#services"
-						className="py-2 text-[15px] hover:tracking-widest transition-all duration-300 ease-linear pl-4"
-						onClick={() => setIsNavOpen(false)}
-					>
-						Services
-					</Link>
-					<Link
-						href="#gallery"
-						className="py-2 text-[15px] hover:tracking-widest transition-all duration-300 ease-linear pl-4"
-						onClick={() => setIsNavOpen(false)}
-					>
-						Gallery
-					</Link>
-					<Link
-						href="#contact"
-						className="py-2 text-[15px] hover:tracking-widest transition-all duration-300 ease-linear pl-4"
-						onClick={() => setIsNavOpen(false)}
-					>
-						Contact
-					</Link>
-					<Link
-						href="#about"
-						className="py-2 text-[15px] hover:tracking-widest transition-all duration-300 ease-linear pl-4"
-						onClick={() => setIsNavOpen(false)}
-					>
-						About
-					</Link>
+						<Link
+							href="#services"
+							className="py-2 text-[15px] hover:tracking-widest transition-all duration-300 ease-linear pl-4"
+							onClick={() => setIsNavOpen(false)}
+						>
+							Services
+						</Link>
+						<Link
+							href="#gallery"
+							className="py-2 text-[15px] hover:tracking-widest transition-all duration-300 ease-linear pl-4"
+							onClick={() => setIsNavOpen(false)}
+						>
+							Gallery
+						</Link>
+						<Link
+							href="#contact"
+							className="py-2 text-[15px] hover:tracking-widest transition-all duration-300 ease-linear pl-4"
+							onClick={() => setIsNavOpen(false)}
+						>
+							Contact
+						</Link>
+						<Link
+							href="#about"
+							className="py-2 text-[15px] hover:tracking-widest transition-all duration-300 ease-linear pl-4"
+							onClick={() => setIsNavOpen(false)}
+						>
+							About
+						</Link>
+					</motion.div>
 				</motion.div>
 			)}
 		</>

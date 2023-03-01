@@ -8,6 +8,7 @@ import NewsLetter from "../components/contact/NewsLetter";
 import ContactUs from "../components/contact/ContactUs";
 import Footer from "../components/footer/Footer";
 import ScrollToTop from "../components/scroll-to-top/ScrollToTop";
+import Products from "../components/products/Products";
 
 export default function Home() {
 	return (
@@ -28,6 +29,7 @@ export default function Home() {
 			<main className="">
 				<Nav />
 				<Hero />
+				<Products />
 				{/* <SliderSection />
 				<Services />
 				<Gallery />
