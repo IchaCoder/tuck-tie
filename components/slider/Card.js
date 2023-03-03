@@ -8,9 +8,8 @@ const Card = ({ name, imageUrl }) => {
 					alt="planning"
 					width="400"
 					height="500"
-					className="w-[500px] h-[230px]"
+					className="h-[350px] w-full object-cover"
 				/>
-				<h3 className="font-semibold text-center p-4">{name}</h3>
 			</div>
 		</div>
 	);

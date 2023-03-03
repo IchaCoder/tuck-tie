@@ -10,7 +10,7 @@ export default function Nav() {
 
 	return (
 		<>
-			<nav className="flex justify-between py-6 px-4 md:px-8 lg:px-16 md:absolute w-full">
+			<nav className="flex justify-between py-6 px-4 md:px-8 w-full">
 				<div>
 					<Link href={"/"} className="text-4xl italic font-bold">
 						Tuck<span className="text-primary">&</span>Tie

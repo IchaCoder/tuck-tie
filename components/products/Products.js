@@ -4,11 +4,11 @@ import fabrics from "./data";
 
 const Products = () => {
 	return (
-		<section className="max-w-[90%] md:max-w-[70%] mx-auto py-12">
-			<h2 className="text-xl font-semibold">Products</h2>
+		<section className="max-w-[90%] md:max-w-[70%] mx-auto pt-12">
+			<h2 className="text-xl font-semibold text-center">Products</h2>
 			<div className="mt-10 gap-8 lg:gap-16 products flex justify-evenly flex-wrap">
 				{fabrics.map((fabric, index) => (
-					<div className="w-max shadow-md" key={index}>
+					<div className="w-max shadow-md cursor-pointer" key={index}>
 						<Image
 							src={fabric.img}
 							alt={fabric.name}
