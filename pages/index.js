@@ -9,6 +9,7 @@ import ContactUs from "../components/contact/ContactUs";
 import Footer from "../components/footer/Footer";
 import ScrollToTop from "../components/scroll-to-top/ScrollToTop";
 import Products from "../components/products/Products";
+import About from "../components/about/About";
 
 export default function Home() {
 	return (
@@ -28,8 +29,8 @@ export default function Home() {
 				<Hero />
 				<Products />
 				<Gallery />
-				{/* <SliderSection /> */}
-				{/* <Services />
+				<About />
+				{/* 
 				<Gallery />
 				<section className="mt-32 mb-20 bg-gradient-cc" id="contact">
 					<div className="max-w-[90%] md:max-w-[80%] mx-auto flex flex-col sm:flex-row gap-8 md:gap-14 justify-between pb-8">
