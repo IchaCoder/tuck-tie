@@ -31,7 +31,6 @@ export default function Home() {
 				<Gallery />
 				<About />
 				{/* 
-				<Gallery />
 				<section className="mt-32 mb-20 bg-gradient-cc" id="contact">
 					<div className="max-w-[90%] md:max-w-[80%] mx-auto flex flex-col sm:flex-row gap-8 md:gap-14 justify-between pb-8">
 						<NewsLetter />

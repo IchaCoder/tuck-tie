@@ -6,7 +6,7 @@ export default function () {
 			<h2 className="text-2xl font-semibold text-center">
 				<span className="text-primary text-4xl">G</span>allery
 			</h2>
-			<div className="max-w-[95%] flex flex-col sm:flex-row mx-auto mt-10 justify-between gap-4 sm:gap-0 aspect-square">
+			<div className="max-w-[95%] flex flex-col sm:flex-row mx-auto mt-10 justify-between gap-4 sm:gap-0">
 				<div className="w-full sm:w-[32.5%] flex flex-col gap-4">
 					<Image
 						src="/assets/gallery_2.jpg"
