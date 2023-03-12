@@ -27,7 +27,8 @@ export default function Home() {
 				<Nav />
 				<Hero />
 				<Products />
-				<SliderSection />
+				<Gallery />
+				{/* <SliderSection /> */}
 				{/* <Services />
 				<Gallery />
 				<section className="mt-32 mb-20 bg-gradient-cc" id="contact">

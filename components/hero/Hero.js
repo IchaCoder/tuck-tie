@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const Hero = () => (
-	<section className="bg-[url(/hero_bg.jpg)] bg-cover min-h-screen bg-no-repeat">
+	<section className="bg-[url(/download.jpg)] min-h-screen ">
 		<div className="max-w-[90%] md:max-w-[80%] mx-auto py-5 text-[rgba(255,255,255,1)]">
 			<h1 className="text-5xl sm:text-7xl font-bold text-center text-primary pt-24 md:pt-32">
 				Tuck & Tie

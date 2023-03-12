@@ -18,6 +18,7 @@ module.exports = {
 			},
 			fontFamily: {
 				Poppins: ["Poppins", "sans-serif"],
+				Bungee: ["Bungee", "sans-serif"],
 			},
 			backgroundImage: {
 				"gradient-cc": "radial-gradient(rgba(255, 215, 0,.3),rgb(255,255,255))",
