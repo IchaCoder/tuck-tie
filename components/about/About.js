@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function About() {
 	return (
-		<section className="py-12">
+		<section className="pt-12">
 			<h2 className="text-2xl font-semibold text-center">
 				<span className="text-primary text-4xl">A</span>bout
 			</h2>
@@ -24,7 +24,7 @@ function About() {
 						<p className="text-xl sm:text-2xl">CEO</p>
 					</div>
 				</div>
-				<div className="flex-1">
+				<div className="flex-1 mt-4 md:mt-0">
 					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi
 					quisquam officiis sed cum fugiat nam unde, expedita ratione,
 					laboriosam ducimus culpa nostrum obcaecati dolore earum sint
