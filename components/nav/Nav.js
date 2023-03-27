@@ -12,7 +12,7 @@ export default function Nav() {
 		<>
 			<nav className="flex justify-between py-6 px-4 md:px-8 w-full">
 				<div>
-					<Link href={"/"} className="text-4xl italic font-bold">
+					<Link href={"/"} className="text-2xl sm:text-4xl italic font-bold">
 						Tuck<span className="text-primary">&</span>Tie
 					</Link>
 				</div>
@@ -25,24 +25,18 @@ export default function Nav() {
 					</Link>
 					<Link
 						className="px-3 hover:text-[rgba(255,255,255,.5)] transition-all duration-200 ease-linear nav_link"
-						href="#services"
-					>
-						Services
-					</Link>
-					<Link
-						className="px-3 hover:text-[rgba(255,255,255,.5)] transition-all duration-200 ease-linear nav_link"
 						href="#gallery"
 					>
 						Gallery
 					</Link>
 					<Link
-						className="px-3 hover:text-[rgba(255,255,255,.5)] transition-all duration-200 ease-linear"
+						className="px-3 hover:text-[rgba(255,255,255,.5)] transition-all duration-200 ease-linear nav_link"
 						href="#contact"
 					>
 						Contact
 					</Link>
 					<Link
-						className="px-3 hover:text-[rgba(255,255,255,.5)] transition-all duration-200 ease-linear"
+						className="px-3 hover:text-[rgba(255,255,255,.5)] transition-all duration-200 ease-linear nav_link"
 						href="#about"
 					>
 						About
@@ -61,7 +55,7 @@ export default function Nav() {
 						className=" items-center hover:tracking-wide text-3xl self-center transition-all duration-200 ease-linear lg:text-base flex"
 					>
 						<MdEmail className="mr-2 text-2xl" />{" "}
-						<span className="hidden lg:flex">example@example.com</span>
+						<span className="hidden lg:flex">info@example.com</span>
 					</a>
 					<FiMenu
 						className="md:hidden text-3xl lg:text-lg self-center cursor-pointer flex"

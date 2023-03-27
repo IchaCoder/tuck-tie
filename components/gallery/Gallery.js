@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function () {
 	return (
-		<section className="pt-12">
+		<section id="gallery" className="pt-12">
 			<h2 className="text-2xl font-semibold text-center">
 				<span className="text-primary text-4xl">G</span>allery
 			</h2>

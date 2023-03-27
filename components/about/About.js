@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function About() {
 	return (
-		<section className="pt-12">
+		<section id="about" className="pt-12">
 			<h2 className="text-2xl font-semibold text-center">
 				<span className="text-primary text-4xl">A</span>bout
 			</h2>

@@ -5,10 +5,11 @@ import { ImLocation } from "react-icons/im";
 
 const ContactUs = () => {
 	return (
-		<div className="max-w-[90%] md:max-w-[70%] mx-auto mt-10">
-			<h2 className="text-black font-bold text-xl text-center sm:pt-8 pb-8">
-				<span className="text-primary text-4xl">G</span>et in touch
-			</h2>
+		<div id="contact" className="max-w-[90%] md:max-w-[70%] mx-auto mt-10">
+			<h1 className="text-black font-bold text-xl text-center sm:pt-8 pb-8">
+				<span className="text-primary text-4xl">G</span>
+				et in touch
+			</h1>
 			<div className="flex flex-col md:flex-row gap-10">
 				<div>
 					<h3 className="font-bold">Send an email</h3>
