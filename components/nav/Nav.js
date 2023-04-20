@@ -10,7 +10,7 @@ export default function Nav() {
 
 	return (
 		<>
-			<nav className="flex justify-between py-6 px-4 md:px-8 w-full">
+			<nav className="flex justify-between py-3 px-4 md:px-8 w-full">
 				<div>
 					<Link href={"/"} className="text-2xl sm:text-4xl italic font-bold">
 						Tuck<span className="text-primary">&</span>Tie
@@ -48,15 +48,8 @@ export default function Nav() {
 						className=" items-center hover:tracking-wide text-2xl self-center transition-all duration-200 ease-linear lg:text-base flex"
 					>
 						<FaPhoneAlt className="mr-2 text-2xl" />{" "}
-						<span className="hidden lg:flex">+233-246-444-444</span>
 					</a>
-					<a
-						href="mailto:example@example.com"
-						className=" items-center hover:tracking-wide text-3xl self-center transition-all duration-200 ease-linear lg:text-base flex"
-					>
-						<MdEmail className="mr-2 text-2xl" />{" "}
-						<span className="hidden lg:flex">info@example.com</span>
-					</a>
+
 					<FiMenu
 						className="md:hidden text-3xl lg:text-lg self-center cursor-pointer flex"
 						onClick={() => setIsNavOpen(true)}
