@@ -19,7 +19,7 @@ export default function MobileNav({ isNavOpen, setIsNavOpen }) {
 					initial="hidden"
 					animate="visible"
 					variants={variants}
-					className="fixed top-20 left-0 w-full"
+					className="fixed top-20 left-0 w-full z-10"
 				>
 					<motion.div className="mx-auto p-4 w-[90%] -mt-20 z-40 relative rounded flex flex-col bg-primary text-white">
 						<div className="flex justify-between">
@@ -34,6 +34,13 @@ export default function MobileNav({ isNavOpen, setIsNavOpen }) {
 							onClick={() => setIsNavOpen(false)}
 						>
 							Home
+						</Link>
+						<Link
+							href="/products"
+							className="py-2 hover:tracking-widest text-[15px] transition-all duration-300 ease-linear pl-4"
+							onClick={() => setIsNavOpen(false)}
+						>
+							Products
 						</Link>
 
 						<Link

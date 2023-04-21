@@ -2,11 +2,10 @@ import buttons from "./btns_data";
 import { useState } from "react";
 import fabrics from "../products/data";
 
-const CategoryBtns = ({ newFabrics, setNewFabrics }) => {
+const CategoryBtns = ({ setNewFabrics }) => {
 	const [selected, setSelected] = useState("");
 
 	const handleClick = (e, id) => {
-		console.log(e.target.textContent.toLowerCase());
 		const textContent = e.target.textContent.toLowerCase();
 		const filteredItems = fabrics.filter((item) => {
 			if (textContent === "new") return item.isNew === true;

@@ -6,23 +6,47 @@ import Footer from "../components/footer/Footer";
 import ScrollToTop from "../components/scroll-to-top/ScrollToTop";
 import fabrics from "../components/products/data";
 import { useState } from "react";
-import CheckoutCart from "../components/products_page/CheckoutCart";
 import { useGlobalContext } from "../components/context/context";
+import Alert from "../components/products_page/Alert";
 
 const Products = () => {
 	const [newFabrics, setNewFabrics] = useState(fabrics);
-	const { setCartItems, cartItems } = useGlobalContext();
+	const { setCartItems, cartItems, setShowMessage, setMessage } =
+		useGlobalContext();
 
 	function handleAddToCart(id) {
-		const selectedItem = fabrics.find((item) => item.id === id);
-		setCartItems([...cartItems, selectedItem]);
+		let isItemFound;
+		for (let i = 0; i < cartItems.length; i++) {
+			if (cartItems[i].id === id) {
+				isItemFound = true;
+			} else {
+				isItemFound = false;
+			}
+		}
+
+		if (cartItems.length <= 0 || !isItemFound) {
+			const selectedItem = fabrics.find((item) => item.id === id);
+			setCartItems([...cartItems, { ...selectedItem, qty: 1 }]);
+			setMessage("Added to Cart");
+			setShowMessage(true);
+			setTimeout(() => {
+				setShowMessage(false);
+			}, 2000);
+		} else if (isItemFound) {
+			setShowMessage(true);
+			setTimeout(() => {
+				setShowMessage(false);
+			}, 2000);
+			setMessage("Item already exists in cart");
+			setCartItems(cartItems);
+		}
 	}
 
 	return (
 		<>
-			{/* <CheckoutCart /> */}
 			<main className="font-Poppins">
 				<Nav />
+				<Alert />
 				<section className="max-w-[90%] md:max-w-[80%] mx-auto pt-4">
 					<div className="bg-gray-300">
 						<CategoryBtns
