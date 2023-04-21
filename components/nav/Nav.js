@@ -1,12 +1,13 @@
 import Link from "next/link";
-import { FaPhoneAlt } from "react-icons/fa";
 import { FiMenu } from "react-icons/fi";
-import { MdEmail } from "react-icons/md";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 import MobileNav from "./MobileNav";
 import { useState } from "react";
+import { useGlobalContext } from "../context/context";
 
 export default function Nav() {
 	const [isNavOpen, setIsNavOpen] = useState(false);
+	const { cartItems } = useGlobalContext();
 
 	return (
 		<>
@@ -43,13 +44,12 @@ export default function Nav() {
 					</Link>
 				</div>
 				<div className="flex gap-4">
-					<a
-						href="tel:+2334444444"
-						className=" items-center hover:tracking-wide text-2xl self-center transition-all duration-200 ease-linear lg:text-base flex"
-					>
-						<FaPhoneAlt className="mr-2 text-2xl" />{" "}
-					</a>
-
+					<div className="relative cursor-pointer">
+						<AiOutlineShoppingCart className="text-3xl" />
+						<div className="w-4 h-4 rounded-full grid place-items-center text-xs absolute top-0 -right-3 bg-primary font-bold">
+							{cartItems.length}
+						</div>
+					</div>
 					<FiMenu
 						className="md:hidden text-3xl lg:text-lg self-center cursor-pointer flex"
 						onClick={() => setIsNavOpen(true)}

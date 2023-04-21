@@ -11,7 +11,7 @@ const Products = () => {
 				<span className="text-primary text-4xl">P</span>roducts
 			</h2>
 			<div className="mt-10 gap-8 lg:gap-8 products grid card_container justify-evenly flex-wrap">
-				{fabrics.map((fabric, index) => (
+				{fabrics.slice(0, 5).map((fabric, index) => (
 					<div className="w-max" key={index}>
 						<Image
 							src={fabric.img}
