@@ -1,10 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { useGlobalContext } from "../context/context";
 import SingleCartItem from "./SingleCartItem";
+import { PaystackButton } from "react-paystack";
 
 export default function () {
 	const { showCheckOut, setShowCheckOut, cartItems, totalPrice } =
 		useGlobalContext();
+	const publicKey = "pk_test_7bd2336b0f2e066d4a87bf9efc348eea92f67b9f";
+	const amount = 1000; // Remember, set in kobo!
+	const [email, setEmail] = useState("example@email.com");
+	const [name, setName] = useState("Emmanuel");
+	const [phone, setPhone] = useState(+233555543385);
+
+	const componentProps = {
+		email,
+		amount,
+		currency: "GHS",
+		metadata: {
+			name,
+			phone,
+		},
+		publicKey,
+		text: "Pay Now",
+		onSuccess: () =>
+			alert("Thanks for doing business with us! Come back soon!!"),
+		onClose: () => alert("Wait! You need this oil, don't go!!!!"),
+	};
 
 	function handleOnclick(e) {
 		if (e.target.classList.contains("fixed")) setShowCheckOut(false);
@@ -26,9 +47,10 @@ export default function () {
 							<div>Total</div>
 							<div>GHC {totalPrice.toFixed(2)}</div>
 						</div>
-						<button className="bg-yellow-300 w-1/2 hover:text-yellow-300 hover:bg-black button font-semibold rounded-sm  m-2 flex justify-center justify-self-center p-2 text-sm">
-							Order
-						</button>
+						<PaystackButton
+							className="paystack-button bg-yellow-300 w-1/2 hover:text-yellow-300 hover:bg-black button font-semibold rounded-sm  m-2 flex justify-center justify-self-center p-2 text-sm"
+							{...componentProps}
+						/>
 					</section>
 				</div>
 			)}

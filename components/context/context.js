@@ -4,7 +4,7 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
 	const [cartItems, setCartItems] = useState([]);
-	const [showCheckOut, setShowCheckOut] = useState(true);
+	const [showCheckOut, setShowCheckOut] = useState(false);
 	const [showMessage, setShowMessage] = useState(false);
 	const [message, setMessage] = useState("");
 	const [totalPrice, setTotalPrice] = useState(0);
