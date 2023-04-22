@@ -12,6 +12,7 @@ export default function SingleCartItem({ item }) {
 		const newItems = cartItems.map((item) => {
 			if (item.id === id) {
 				item.qty += 1;
+				item.price = item.price * item.qty;
 			}
 			return item;
 		});
@@ -23,12 +24,12 @@ export default function SingleCartItem({ item }) {
 			if (item.id === id) {
 				item.qty -= 1;
 				if (item.qty < 1) item.qty = 1;
+				item.price = item.price * item.qty;
 			}
 			return item;
 		});
 		setCartItems(newItems);
 	};
-	const price = item.price * item.qty;
 	return (
 		<div className="flex bg-white p-4 gap-4 rounded-lg shadow-md relative">
 			<div
@@ -47,7 +48,7 @@ export default function SingleCartItem({ item }) {
 					<h2 className="text-lg font-bold">{item.name}</h2>
 					<div className="self-center text-[#c76923] font-semibold my-2">
 						<span className="text-gray-400 text-sm">GHC</span>
-						{price.toFixed(2)}
+						{item.price.toFixed(2)}
 					</div>
 					<div className="flex justify-around">
 						<span

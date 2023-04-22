@@ -3,11 +3,13 @@ import { useGlobalContext } from "../context/context";
 import SingleCartItem from "./SingleCartItem";
 
 export default function () {
-	const { showCheckOut, setShowCheckOut, cartItems } = useGlobalContext();
+	const { showCheckOut, setShowCheckOut, cartItems, totalPrice } =
+		useGlobalContext();
 
 	function handleOnclick(e) {
 		if (e.target.classList.contains("fixed")) setShowCheckOut(false);
 	}
+
 	return (
 		<>
 			{showCheckOut && (
@@ -19,6 +21,11 @@ export default function () {
 						{cartItems.map((item) => (
 							<SingleCartItem key={item.id} item={item} />
 						))}
+						<hr />
+						<div className="flex justify-between w-[90%] mx-auto">
+							<div>Total</div>
+							<div>GHC {totalPrice.toFixed(2)}</div>
+						</div>
 						<button className="bg-yellow-300 w-1/2 hover:text-yellow-300 hover:bg-black button font-semibold rounded-sm  m-2 flex justify-center justify-self-center p-2 text-sm">
 							Order
 						</button>

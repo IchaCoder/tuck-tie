@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 
 const AppContext = React.createContext();
 
@@ -7,6 +7,17 @@ const AppProvider = ({ children }) => {
 	const [showCheckOut, setShowCheckOut] = useState(true);
 	const [showMessage, setShowMessage] = useState(false);
 	const [message, setMessage] = useState("");
+	const [totalPrice, setTotalPrice] = useState(0);
+
+	function calculateTotalPrice() {
+		let totalPrice = 0;
+		cartItems.forEach((item) => (totalPrice += item.price));
+		setTotalPrice(totalPrice);
+	}
+
+	useEffect(() => {
+		calculateTotalPrice();
+	}, [cartItems]);
 
 	return (
 		<AppContext.Provider
@@ -19,6 +30,9 @@ const AppProvider = ({ children }) => {
 				setShowMessage,
 				message,
 				setMessage,
+				totalPrice,
+				setTotalPrice,
+				calculateTotalPrice,
 			}}
 		>
 			{children}
