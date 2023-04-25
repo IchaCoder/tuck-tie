@@ -25,13 +25,13 @@ function About() {
 					</div>
 				</div>
 				<div className="flex-1 mt-4 md:mt-0">
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi
-					quisquam officiis sed cum fugiat nam unde, expedita ratione,
-					laboriosam ducimus culpa nostrum obcaecati dolore earum sint
-					dignissimos placeat nemo vel. Neque dignissimos nihil at, fuga sequi
-					atque necessitatibus laboriosam quae corrupti incidunt. Id quo
-					nesciunt laboriosam, dolorem adipisci vel. Nobis eaque mollitia
-					tenetur sunt fugit provident alias expedita repudiandae hic. Eos esse
+					Tuck & Tie is a leading fabric wholesale company that specializes in
+					providing premium quality textiles to businesses in the fashion and
+					home decor industries. With a wide range of fabrics to choose from,
+					Tuck & Tie is committed to delivering exceptional products at
+					competitive prices. Whether you're a designer, manufacturer, or
+					retailer, Tuck & Tie is dedicated to meeting your fabric needs and
+					ensuring your success in the industry.
 				</div>
 			</div>
 		</section>

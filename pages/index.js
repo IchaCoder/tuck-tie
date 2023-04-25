@@ -19,7 +19,13 @@ export default function Home() {
 				<meta name="description" content="" />
 				<meta
 					name="keywords"
-					content="Consultancy Services, Architectural Design, Estate Development, Renovation and Repair Works, Structural Design, Land Surveying, Building Construction, Contract Administration"
+					content="Fabric wholesale,
+Textile supplier,
+Fashion industry,
+Home decor industry,
+Premium quality fabrics,
+Affordable fabrics,
+Fabric supplier"
 				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
