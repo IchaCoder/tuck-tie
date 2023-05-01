@@ -14,10 +14,7 @@ const Hero = () => (
 				<h3>Stylish</h3>
 			</div>
 			<p className="md:w-[60%] mx-auto my-4 text-gray-200 text-justify">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ea
-				officiis esse facilis qui cumque ipsum sunt laboriosam voluptate, quos,
-				earum, dolores nobis minima eveniet ad reiciendis laudantium. Eveniet,
-				provident
+				Quality and Affordable fabrics is our hallmark
 			</p>
 			<Link
 				href={"#contact"}
