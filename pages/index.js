@@ -10,36 +10,38 @@ import Footer from "../components/footer/Footer";
 import ScrollToTop from "../components/scroll-to-top/ScrollToTop";
 import Products from "../components/products/Products";
 import About from "../components/about/About";
+import Alert from "../components/products_page/Alert";
 
 export default function Home() {
-	return (
-		<div className="font-Poppins overflow-hidden">
-			<Head>
-				<title>Tuck & Tie</title>
-				<meta name="description" content="" />
-				<meta
-					name="keywords"
-					content="Fabric wholesale,
-Textile supplier,
-Fashion industry,
-Home decor industry,
-Premium quality fabrics,
-Affordable fabrics,
-Fabric supplier"
-				/>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
+    return (
+        <div className="font-Poppins overflow-hidden">
+            <Head>
+                <title>Tuck & Tie</title>
+                <meta name="description" content="" />
+                <meta
+                    name="keywords"
+                    content="Fabric wholesale,
+					Textile supplier,
+					Fashion industry,
+					Home decor industry,
+					Premium quality fabrics,
+					Affordable fabrics,
+					Fabric supplier"
+                />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
 
-			<main>
-				<Nav />
-				<Hero />
-				<Products />
-				<Gallery />
-				<About />
-				<ContactUs />
-			</main>
-			<Footer />
-			<ScrollToTop />
-		</div>
-	);
+            <main>
+                <Alert />
+                <Nav />
+                <Hero />
+                <Products />
+                <Gallery />
+                <About />
+                <ContactUs />
+            </main>
+            <Footer />
+            <ScrollToTop />
+        </div>
+    );
 }

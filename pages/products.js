@@ -10,91 +10,66 @@ import { useGlobalContext } from "../components/context/context";
 import Alert from "../components/products_page/Alert";
 
 const Products = () => {
-	const [newFabrics, setNewFabrics] = useState(fabrics);
-	const { setCartItems, cartItems, setShowMessage, setMessage } =
-		useGlobalContext();
+    const [newFabrics, setNewFabrics] = useState(fabrics);
+    const { handleAddToCart } = useGlobalContext();
 
-	function handleAddToCart(id) {
-		let isItemFound;
-		for (let i = 0; i < cartItems.length; i++) {
-			if (cartItems[i].id === id) {
-				isItemFound = true;
-			} else {
-				isItemFound = false;
-			}
-		}
+    return (
+        <>
+            <main className="font-Poppins">
+                <Nav />
+                <Alert />
+                <section className="max-w-[90%] md:max-w-[80%] mx-auto pt-4">
+                    <div className="bg-gray-300">
+                        <CategoryBtns
+                            newFabrics={newFabrics}
+                            setNewFabrics={setNewFabrics}
+                        />
+                        <div className="gap-8 lg:gap-8 products grid card_container justify-evenly flex-wrap">
+                            {newFabrics.map((fabric, index) => {
+                                const { name, img, price, isNew, id } = fabric;
+                                return (
+                                    <div className="w-max relative" key={index}>
+                                        {isNew && (
+                                            <div className="bg-red-400 p-3 absolute right-0 top-0">
+                                                NEW
+                                            </div>
+                                        )}
 
-		if (cartItems.length <= 0 || !isItemFound) {
-			const selectedItem = fabrics.find((item) => item.id === id);
-			setCartItems([...cartItems, { ...selectedItem, qty: 1 }]);
-			setMessage("Added to Cart");
-			setShowMessage(true);
-			setTimeout(() => {
-				setShowMessage(false);
-			}, 2000);
-		} else if (isItemFound) {
-			setShowMessage(true);
-			setTimeout(() => {
-				setShowMessage(false);
-			}, 2000);
-			setMessage("Item already exists in cart");
-			setCartItems(cartItems);
-		}
-	}
-
-	return (
-		<>
-			<main className="font-Poppins">
-				<Nav />
-				<Alert />
-				<section className="max-w-[90%] md:max-w-[80%] mx-auto pt-4">
-					<div className="bg-gray-300">
-						<CategoryBtns
-							newFabrics={newFabrics}
-							setNewFabrics={setNewFabrics}
-						/>
-						<div className="gap-8 lg:gap-8 products grid card_container justify-evenly flex-wrap">
-							{newFabrics.map((fabric, index) => {
-								const { name, img, price, isNew, id } = fabric;
-								return (
-									<div className="w-max relative" key={index}>
-										{isNew && (
-											<div className="bg-red-400 p-3 absolute right-0 top-0">
-												NEW
-											</div>
-										)}
-
-										<Image
-											src={img}
-											alt={name}
-											width="200"
-											height="200"
-											className="w-full object-cover"
-										/>
-										<div className="py-4 bg-white m-4 shadow-md p-4 relative -mt-8 max-w-[170px] w-max">
-											<h3 className="text-lg md:text-xl font-bold font-Bungee">
-												{name}
-											</h3>
-											<div className=" sm:text-xl py-2">GHC {price}</div>
-											<button
-												className="bg-yellow-300 hover:text-yellow-300 hover:bg-black button font-semibold rounded-sm  mt-2 flex justify-center p-2 text-sm"
-												onClick={() => handleAddToCart(id)}
-											>
-												<AiOutlinePlus className="mr-1 self-center" />
-												Add to Cart
-											</button>
-										</div>
-									</div>
-								);
-							})}
-						</div>
-					</div>
-				</section>
-			</main>
-			<Footer />
-			<ScrollToTop />
-		</>
-	);
+                                        <Image
+                                            src={img}
+                                            alt={name}
+                                            width="200"
+                                            height="200"
+                                            className="w-full object-cover"
+                                        />
+                                        <div className="py-4 bg-white m-4 shadow-md p-4 relative -mt-8 max-w-[170px] w-max">
+                                            <h3 className="text-lg md:text-xl font-bold font-Bungee">
+                                                {name}
+                                            </h3>
+                                            <div className=" sm:text-xl py-2">
+                                                GHC {price}
+                                            </div>
+                                            <button
+                                                className="bg-yellow-300 hover:text-yellow-300 hover:bg-black button font-semibold rounded-sm  mt-2 flex justify-center p-2 text-sm"
+                                                onClick={() =>
+                                                    handleAddToCart(id)
+                                                }
+                                            >
+                                                <AiOutlinePlus className="mr-1 self-center" />
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <Footer />
+            <ScrollToTop />
+        </>
+    );
 };
 
 export default Products;
